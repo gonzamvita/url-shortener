@@ -9,11 +9,6 @@ class LinksController < ApplicationController
   end
 
   def shortener
-    short_url = Link.generate_random_shortlink(3)
-    @link = Link.create(
-                original_url: params[:original_url],
-                short_url: short_url)
-    @link.save
+    @link = Link.verify_short_url(params[:original_url])
   end
-
 end

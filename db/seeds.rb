@@ -1,5 +1,5 @@
 Link.create(
-    original_url: '/www.as.com',
+    original_url: 'http://www.as.com',
     short_url: '123'
   )
 
